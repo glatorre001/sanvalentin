@@ -12,10 +12,9 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            /* El color exacto que pediste */
-            background-color: #6aadb6;
+            background-color: #6aadb6; /* El color que elegiste */
             font-family: 'Arial', sans-serif;
-            font-weight: bold; /* Todo el texto en negrita */
+            font-weight: bold; /* Todo en negrita */
         }
 
         .heart-bg {
@@ -42,7 +41,13 @@
             position: relative;
         }
 
-        h1 { color: #d63384; font-size: 22px; margin-bottom: 15px; text-transform: uppercase; }
+        h1 { 
+            color: #d63384; 
+            font-size: 22px; 
+            margin-bottom: 15px; 
+            text-transform: none; /* Quitamos las mayúsculas forzadas */
+        }
+        
         p { color: #333; font-size: 15px; margin-bottom: 30px; line-height: 1.5; }
 
         .buttons {
@@ -65,7 +70,7 @@
             display: inline-block;
         }
 
-        #yesBtn { background: #ff4d6d; color: white; border: 2px solid white; }
+        #yesBtn { background: #ff4d6d; color: white; }
         #noBtn { background: #548d94; color: white; position: relative; }
 
         .gift-link {
@@ -74,7 +79,6 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             margin-top: 20px;
             animation: bounce 2s infinite;
-            border: 2px solid #d63384;
         }
 
         @keyframes bounce {
@@ -86,16 +90,16 @@
 </head>
 <body onclick="playMusic()">
 
-    <iframe id="musica" style="display:none" src="https://www.youtube.com/watch?v=I2HU4ve99kI" allow="autoplay"></iframe>
+    <iframe id="musica" style="display:none" src="https://www.youtube.com/embed/69idT_4F88A?enablejsapi=1" allow="autoplay"></iframe>
 
     <div class="container">
-        <div style="font-size: 40px;">Maria Del Carmen</div>
-        <h1>¿Quieres ser mi San Valentín en todos los universos posibles?</h1>
-        <p>Maca Maquita Maca Maca Maca Maca Maca Maquita Maca Maca Maca Maca Maquita Maca Maca Maca Maca Maca Maca Maca Maquita Maca Maca Maquita</p>
+        <div style="font-size: 20px; color: #d63384; margin-bottom: 10px;">Maria Del Carmen</div>
+        <h1>¿Quieres ser mi san valentín en todos los universos posibles?</h1>
+        <p>maca maquita maca maca maca maca maca maquita maca maca maca maca maquita maca maca maca maca maca maca maca maquita maca maca maquita</p>
         
         <div class="buttons">
-            <button id="yesBtn" onclick="victoria()">SÍ </button>
-            <button id="noBtn" onmouseover="moveButton()" onclick="moveButton()">No</button>
+            <button id="yesBtn" onclick="victoria()">sí ❤️</button>
+            <button id="noBtn" onmouseover="moveButton()" onclick="moveButton()">no</button>
         </div>
     </div>
 
@@ -111,12 +115,12 @@
 
         function victoria() {
             // URL de Miguel Bosé - Te amaré
-            const videoUrl = "https://www.youtube.com/watch?v=PP9MhNCZSDU"; 
+            const videoUrl = "https://www.youtube.com/watch?v=0_uFzS_N7Wk"; 
             
             document.querySelector('.container').innerHTML = `
-                <h1 style="color: #ff4d6d">Gracias Maca Maquita Maca</h1>
-                <p style="font-size: 18px; color: #000;">Te a Maquita de mi vida <br>Te amo siempre.</p>
-                <a href="${videoUrl}" target="_blank" class="gift-link">🎁 REGALO</a>
+                <h1 style="color: #ff4d6d">gracias maca maquita maca</h1>
+                <p style="font-size: 18px; color: #000;">te amo maquita de mi vida <br>te amo siempre.</p>
+                <a href="${videoUrl}" target="_blank" class="gift-link">🎁 regalo</a>
             `;
             for(let i=0; i<40; i++) { setTimeout(createHeart, i*100); }
         }
