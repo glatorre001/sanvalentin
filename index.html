@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi San Valentín?</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #ffe6e6; text-align: center; overflow: hidden; }
+        .container { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); max-width: 80%; }
+        h1 { color: #d63384; font-size: 24px; }
+        p { color: #555; line-height: 1.5; }
+        .buttons { margin-top: 30px; display: flex; justify-content: center; align-items: center; min-height: 100px; }
+        button { padding: 15px 30px; font-size: 18px; border: none; border-radius: 10px; cursor: pointer; transition: 0.3s; }
+        #yesBtn { background-color: #ff4d6d; color: white; z-index: 10; }
+        #noBtn { background-color: #888; color: white; position: absolute; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¿Quieres ser mi San Valentín en todos los universos posibles?</h1>
+        <p>Maca Maquita Maca Maca Maca Maca Maca Maca Maquita Maca Maca Maca Maca Maquita Maca Maca Maca Maca Maca Maca Maca Maca Maquita Maca Maca Maquita Maca Maca Maca Maca Maca Maca Maquita Maca Maca Maca Maquita</p>
+        <div class="buttons">
+            <button id="yesBtn" onclick="victoria()">¡SÍ!</button>
+            <button id="noBtn" onmouseover="moveButton()" onclick="escapatoria()">No</button>
+        </div>
+    </div>
+
+    <script>
+        function victoria() {
+            alert('Te amo Maquita de mi vida. Te amo siempre ❤️');
+            // Opcional: Redirigir a una foto de ustedes después del OK
+            // window.location.href = "URL_DE_UNA_FOTO"; 
+        }
+
+        function escapatoria() {
+            alert('Macaaaaaaaaaaaaaaa grrrr. No hay escapatoria');
+        }
+
+        function moveButton() {
+            const x = Math.random() * (window.innerWidth - 150);
+            const y = Math.random() * (window.innerHeight - 100);
+            const btn = document.getElementById('noBtn');
+            btn.style.left = x + 'px';
+            btn.style.top = y + 'px';
+        }
+    </script>
+</body>
+</html>
