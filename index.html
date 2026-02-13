@@ -45,6 +45,7 @@
             font-size: 24px; 
             margin-bottom: 20px; 
             font-weight: bold; /* Título en negrita */
+            text-transform: none; /* Sin mayúsculas forzadas */
         }
 
         p { 
@@ -91,13 +92,13 @@
     <iframe id="musica" style="display:none" src="https://www.youtube.com/embed/69idT_4F88A?enablejsapi=1" allow="autoplay"></iframe>
 
     <div class="container">
-        <div style="font-size: 14px; color: #4a7c7c; margin-bottom: 5px;">Maria Del Carmen</div>
-        <h1>¿Quieres ser mi san valentín en todos los universos posibles?</h1>
-        <p>maca maquita maca maca maca maca maca maquita maca maca maca maca maquita maca maca maca maca maca maca maca maquita maca maca maquita</p>
+        <div style="font-size: 14px; color: #4a7c7c; margin-bottom: 5px; font-weight: bold;">Maria Del Carmen</div>
+        <h1>¿Quieres ser mi San Valentín en todos los universos posibles?</h1>
+        <p>Maca Maquita Maca Maca Maca Maca Maca Maquita Maca Maca Maca Maca Maquita Maca Maca Maca Maca Maca Maca Maca Maquita Maca Maca Maquita</p>
         
         <div class="buttons">
-            <button id="yesBtn" onclick="victoria()">sí ❤️</button>
-            <button id="noBtn" onmouseover="moveButton()" onclick="moveButton()">no</button>
+            <button id="yesBtn" onclick="victoria()">Sí ❤️</button>
+            <button id="noBtn" onmouseover="moveButton()" onclick="moveButton()">No</button>
         </div>
     </div>
 
@@ -114,9 +115,9 @@
         function victoria() {
             const videoUrl = "https://www.youtube.com/watch?v=0_uFzS_N7Wk"; // Miguel Bosé
             document.querySelector('.container').innerHTML = `
-                <h1 style="color: #ff6b6b">gracias maca maquita maca</h1>
-                <p>te amo maquita de mi vida. te amo siempre.</p>
-                <a href="${videoUrl}" target="_blank" class="gift-link">🎁 regalo</a>
+                <h1 style="color: #ff6b6b">Gracias Maca Maquita Maca</h1>
+                <p style="font-weight: bold;">Te amo Maquita de mi vida. Te amo siempre.</p>
+                <a href="${videoUrl}" target="_blank" class="gift-link">🎁 Regalo</a>
             `;
             for(let i=0; i<30; i++) { setTimeout(createHeart, i*150); }
         }
